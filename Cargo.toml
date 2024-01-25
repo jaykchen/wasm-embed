@@ -1,0 +1,16 @@
+[package]
+name = "wasm-embed"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.79"
+fastembed = "2.0.1"
+lazy_static = "1.4.0"
+once_cell = "1.19.0"
+serde = {version = "1.0.195", features = ["derive"]}
+serde_json = "1.0.111"
+tokio_wasi = {version = "1.25.2", features = ["io-util", "macros", "rt"]}
+wasi-nn = { git = "https://github.com/second-state/wasmedge-wasi-nn", branch = "refactor-execution-context" }
